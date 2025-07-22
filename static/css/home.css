@@ -1,0 +1,34 @@
+.split-container {
+    display: flex;
+    align-items: stretch; /* Hace que las columnas tengan la misma altura */
+    width: 100%;
+    /* Ocupa el 100% de la altura de su contenedor padre (el tag <main>) */
+    height: 100%;
+}
+
+.split-image-side {
+    flex: 0 0 50%; /* La columna ocupa el 50% del ancho */
+    position: relative;
+}
+
+.split-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen cubra el área de la columna sin distorsionarse */
+}
+
+.split-text-side {
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center; /* Centra el texto del h1 */
+}
+
+/* Para pantallas más pequeñas, apila las columnas verticalmente */
+@media (max-width: 767.98px) {
+    .split-container {
+        flex-direction: column;
+    }
+}

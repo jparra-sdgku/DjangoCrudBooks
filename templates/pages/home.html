@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+{% load static %}
+
+{% block page_styles %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock page_styles %}
+
+{% block content %}
+<div class="split-container">
+    <div class="split-image-side">
+        <img src="{% static 'img/inventory_home_page.jpg' %}" alt="Showcase Image">
+    </div>
+    <div class="split-text-side">
+        <h1>Inventory Management System</h1>
+    </div>
+</div>
+{% endblock content %}
