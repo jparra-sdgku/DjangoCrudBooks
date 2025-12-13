@@ -21,4 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
     path('', include('inventory.urls')),
+    path('',include('users.urls')),
+
 ]
+
+handler404 = 'inventory.views.custom_404'

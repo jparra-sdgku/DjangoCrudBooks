@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages',
     'inventory',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGIN_REDIRECT_URL = 'home_page' # Redirects to home after login
+LOGOUT_REDIRECT_URL = 'home_page' # Redirects to home after logout
+ACCOUNT_LOGOUT_REDIRECT_URL = 'home_page'

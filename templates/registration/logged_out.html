@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block page_styles %}<meta http-equiv="refresh" content="2;url={% url 'home' %}">{% endblock page_styles %}
+
+{% block title %}Logged Out{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Has cerrado sesión.</h2>
+                    <p>Gracias por tu visita. Serás redirigido a la página de inicio en unos segundos...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
