@@ -41,7 +41,8 @@
                     <a href="{% url 'edit_book' book.id %}" class="btn btn-primary">Edit</a>
                 </td>
                 <td>
-                    <a href="{% url 'delete_book' book.id %}" class="btn btn-primary">Delete</a>
+                    <a href="{% url 'delete_book' book.id %}" class="btn btn-danger">Delete</a>
+                    <!-- <a href="{% url 'delete_book_custom' book.id %}" class="btn btn-danger">Delete</a> -->
                 </td>
             </tr>
             {% endfor %}

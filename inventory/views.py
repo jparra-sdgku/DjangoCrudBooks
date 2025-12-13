@@ -67,6 +67,14 @@ class DeleteBookView(DeleteView):
     template_name = 'inventory/delete_book.html'
     success_url = reverse_lazy('inventory_page')
 
+def delete_book_view(request, id):
+    book = Book.objects.get(id=id)
+    if request.method == 'POST':
+        book.delete()
+        return redirect('inventory_page')
+    else:
+        form= BookForm(instance=book)
+    return render(request, 'inventory/delete_book.html', {'book': book})
 
 
 
